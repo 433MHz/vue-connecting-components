@@ -1,14 +1,16 @@
 <template>
   <div>
-  <Parent>Parent not working</Parent>
+    <Child>Child not working</Child>
+    <OtherChild>Other child not working</OtherChild>
   </div>
 </template>
 
 
 <script>
-import Parent from './components/Parent.vue'
+import Child from './components/Child.vue'
+import OtherChild from './components/OtherChild.vue'
 export default {
-  components: {Parent },
+  components: { Child, OtherChild },
   
 }
-</script>Child
+</script>

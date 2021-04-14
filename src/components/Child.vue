@@ -1,17 +1,21 @@
 <template>
 <div>
-    <h1>Im child</h1>
-    <label for="textArea">Wpisz coś: </label> <input type="text" id="textArea" placeholder="Wpisz coś" v-model="text"> 
-    <button v-on:click="UpdateParentValue(text)">Zatwierdź</button>
+    <h1>I'm child</h1>
+    <h2>And value one from index.js is: {{valueOneFromIndex}}</h2>
 </div>
 </template>
 
 <script>
 export default {
-    methods:{
-        UpdateParentValue(text){
-            this.$emit('updateParentData', text)
+    data(){
+        return{
+            valueOneFromIndex: '',
         }
+    },
+
+    mounted(){
+        this.valueOneFromIndex = this.$store.state.valueOne
     }
+    
 }
 </script>
