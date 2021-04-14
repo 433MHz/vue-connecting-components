@@ -9,9 +9,10 @@ export default new Vuex.Store({
      valueTwo: 'SecondSomeone'
  },
  getters: {
-     valueOneMr: state => {
-         return 'Mr ' + state.valueOne
-     },
+     
+    valueOneMr: function (state) { 
+        return 'Mr ' + state.valueOne; 
+    },
 
      valueTwoMr: state => {
          return 'Mr ' + state.valueTwo
