@@ -14,7 +14,7 @@ export default {
     },
 
     mounted(){
-        this.valueOneFromIndex = this.$store.state.valueOne
+        this.valueOneFromIndex = this.$store.getters.valueOneMr
     }
     
 }

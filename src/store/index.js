@@ -5,10 +5,18 @@ Vue.use(Vuex);
  
 export default new Vuex.Store({
  state: {
-     valueOne: 'Krystian',
-     valueTwo: 'Izdebski'
+     valueOne: 'Someone',
+     valueTwo: 'SecondSomeone'
  },
- getters: {},
+ getters: {
+     valueOneMr: state => {
+         return 'Mr ' + state.valueOne
+     },
+
+     valueTwoMr: state => {
+         return 'Mr ' + state.valueTwo
+     }
+ },
  mutations: {},
  actions: {}
 });
