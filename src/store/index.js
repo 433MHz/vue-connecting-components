@@ -4,20 +4,30 @@ import Vuex from "vuex";
 Vue.use(Vuex);
  
 export default new Vuex.Store({
+    strict: true,
  state: {
-     valueOne: 'Someone',
-     valueTwo: 'SecondSomeone'
+     ValueOne: 'Someone',
+     ValueTwo: 'SecondSomeone'
  },
- getters: {
-     
-    valueOneMr: function (state) { 
-        return 'Mr ' + state.valueOne; 
-    },
 
-     valueTwoMr: state => {
-         return 'Mr ' + state.valueTwo
+ getters: {
+     MrValueOne : state => {
+         return 'Mr ' + state.ValueOne
+     },
+
+     MrValueTwo: state => {
+         return 'Mr ' + state.ValueTwo
      }
  },
- mutations: {},
+
+ mutations: {
+     ChangeValueOne (state, value){
+        state.ValueOne = value
+     },
+
+     ChangeValueTwo (state, valueTwo){
+        state.ValueTwo = valueTwo
+     }
+ },
  actions: {}
 });
