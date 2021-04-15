@@ -12,7 +12,7 @@
 export default {
     methods:{
         ChangeValueOne(text){
-            this.$store.commit('ChangeValueOne', text)
+            this.$store.dispatch('ValueOneChange', text)
         }
     }
   

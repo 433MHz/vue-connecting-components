@@ -1,3 +1,4 @@
+import { setTimeout } from "core-js";
 import Vue from "vue";
 import Vuex from "vuex";
  
@@ -29,5 +30,17 @@ export default new Vuex.Store({
         state.ValueTwo = valueTwo
      }
  },
- actions: {}
+ actions: {
+     ValueOneChange (context, payload){
+         setTimeout(function(){
+        context.commit('ChangeValueOne', payload)
+         }, 2000)
+     },
+
+     ValueTwoChange(context, payload){
+         setTimeout(function(){
+        context.commit('ChangeValueTwo', payload)
+         },2000)
+    }
+ }
 });

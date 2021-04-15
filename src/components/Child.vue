@@ -10,10 +10,10 @@
 
 <script>
 export default {
-    
+
     methods:{
         ChangeValueTwo(text){
-            this.$store.commit('ChangeValueTwo', text)
+            this.$store.dispatch('ValueTwoChange', text)
         }
     }
     
