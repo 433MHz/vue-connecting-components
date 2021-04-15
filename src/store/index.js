@@ -18,6 +18,14 @@ export default new Vuex.Store({
 
      MrValueTwo: state => {
          return 'Mr ' + state.ValueTwo
+     },
+
+     ValueOne: state => {
+         return state.ValueOne
+     },
+
+     ValueTwo: state => {
+         return state.valueTwo
      }
  },
 
